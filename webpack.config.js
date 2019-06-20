@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2016-11-20 13:19:28
 * @Last Modified by:   Rosen
-* @Last Modified time: 2017-03-21 18:13:41
+* @Last Modified time: 2018-12-04 16:57:45
 * 知识点：css单独打包、全局jquery引用、各种loader
 */
 
@@ -42,10 +42,12 @@ var config = {
     module: {
         // noParse: [],
         loaders: [
-            {test: /\.css$/, loader: ExtractTextPlugin.extract({
-                use: 'css-loader',
-                fallback : 'style-loader'
-            })},
+            {
+                test: /\.css$/, loader: ExtractTextPlugin.extract({
+                    use: 'css-loader',
+                    fallback : 'style-loader'
+                })
+            },
             {test: /\.scss$/, loader: ExtractTextPlugin.extract({
                 use: 'css-loader!sass-loader',
                 fallback : 'style-loader'
@@ -93,12 +95,21 @@ var config = {
                 collapseWhitespace: false
             }
         }),
-    ]
+    ],
+    devServer: {
+        port: 8086,
+        proxy : {
+            '/manage' : {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin : true
+            },
+            '/user/logout.do' : {
+                target: 'http://admintest.happymmall.com',
+                changeOrigin : true
+            }
+        }
+    }
 };
 
-// 开发环境下，使用devServer热加载
-if(WEBPACK_ENV === 'dev'){
-    config.entry.app.push('webpack-dev-server/client?http://localhost:8086');
-}
 
 module.exports = config;

@@ -4,10 +4,10 @@
   "description": "admin.happymmall.com",
   "main": "index.js",
   "scripts": {
-    "dev"     : "WEBPACK_ENV=dev webpack-dev-server --port 8086 --inline --secure false",
-    "dev_win" : "set WEBPACK_ENV=dev && webpack-dev-server --port 8086 --inline --secure false",
-    "dist"    : "WEBPACK_ENV=online webpack -p",
-    "dist_win": "set WEBPACK_ENV=online && webpack -p"
+    "dev"     : "WEBPACK_ENV=dev ./node_modules/.bin/webpack-dev-server --port 8086 --inline",
+    "dev_win" : "set WEBPACK_ENV=dev&& .\\node_modules\\.bin\\webpack-dev-server --port 8086 --inline",
+    "dist"    : "WEBPACK_ENV=online ./node_modules/.bin/webpack -p",
+    "dist_win": "set WEBPACK_ENV=online&& .\\node_modules\\.bin\\webpack -p"
   },
   "repository": {
     "type": "git",
@@ -18,14 +18,13 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.6.3",
-    "hogan.js": "^3.0.2",
     "rc-pagination": "^1.7.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-fileupload": "^2.4.0",
     "react-router": "^3.0.2",
     "sb-admin-2": "^3.3.8",
-    "simditor": "^2.3.6"
+    "simditor": "2.3.6"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
