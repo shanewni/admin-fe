@@ -13,7 +13,7 @@
     margin-right: 10px;
     height: 350px;
     background: #666;
-    color: #fff;
+    color: #d4d4bd;
 }
 .cate-wrap .cate-item{
     position: relative;
@@ -33,7 +33,7 @@
 }
 .cate-wrap .cate-item .cate-link{
     margin-right: 3px;
-    color: #fff;
+    color: #d4d4bd;
     text-decoration: none;
 
 }
@@ -65,7 +65,7 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
-    color: #fff;
+    color: #d4d4bd;
     font-size: 30px;
     background: rgba(0,0,0,.2);
     cursor: pointer;
@@ -92,7 +92,7 @@
     height: 10px;
     margin: 0 4px;
     text-indent: -999em;
-    border: 2px solid #fff;
+    border: 2px solid #d4d4bd;
     border-radius: 6px;
     cursor: pointer;
     opacity: .4;
@@ -101,7 +101,7 @@
     transition: background .5s, opacity .5s;
 }
 .banner .dots li.active {
-    background: #fff;
+    background: #d4d4bd;
     opacity: 1;
 }
 /* floor */
@@ -142,7 +142,7 @@
     margin: 15px 20px 15px 0;
     float: left;
     cursor: pointer;
-    background: #fff;
+    background: #d4d4bd;
     transition: box-shadow .5s ease;
 }
 .floor-wrap .floor-item:hover{
