@@ -26,7 +26,7 @@ var config = {
     // path && publickPath
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : WEBPACK_ENV === 'online' ? '//s.libai5.com/admin-fe/dist/' : '/dist/',
+        publicPath  : WEBPACK_ENV === 'online' ? '//s.libai555.com/admin-fe/dist/' : '/dist/',
         filename    : 'js/[name].js'
     },
     resolve: {
@@ -83,7 +83,7 @@ var config = {
         // html 加载
         new HtmlWebpackPlugin({
             filename        : 'view/index.html',
-            title           : 'MMall 后台管理系统',
+            title           : '白白 后台管理系统',
             template        : './src/index.html',
             favicon         : './favicon.ico',
             inject          : true,
@@ -100,11 +100,11 @@ var config = {
         port: 8086,
         proxy : {
             '/manage' : {
-                target: 'http://admintest.happymmall.com',
+                target: 'http://admin.libai555.com',
                 changeOrigin : true
             },
             '/user/logout.do' : {
-                target: 'http://admintest.happymmall.com',
+                target: 'http://admin.libai555.com',
                 changeOrigin : true
             }
         }
